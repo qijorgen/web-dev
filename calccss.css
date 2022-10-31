@@ -1,0 +1,119 @@
+.calc-container {
+    background-color: black;
+    display:inline-block;
+    float: left;
+    margin: 20px;
+}
+.calc2 {
+    display: inline-block;
+}
+.calc-container table {
+    background-color: black;
+}
+.calc-container table, th, td {
+    border:1px solid black;
+    font-size: 25px;
+    border-spacing:10px;
+}
+th, td {
+    border-radius: 50%;
+    text-align: center;
+    padding: 15px;
+    width:35px;
+    background-color:rgb(75, 72, 72);
+    color: white;
+}
+td:hover {
+    cursor: grab;
+}
+th {
+    background-color:darkgrey;
+    color: black;
+}
+.calc-container div {
+    height:150px;
+    width:321px;
+}
+button {
+    background-color:rgb(75, 72, 72);
+    border:none;
+    color:white;
+    font-size:25px;
+}
+h1 {
+    line-height: 200px;
+    font-size:60px;
+    color: white;
+    text-align: right;
+    background-color: black;
+}
+#zero {
+    border-radius:35px;
+    text-align:left;
+}
+.operator {
+    background-color: orange;
+    color: white;
+    font-size:30px;
+}
+.calc2 {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background-image: url('https://www.w3schools.com/images/w3lynx_200.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.calc2 #display {
+    line-height:280px;
+    background-color: black;
+    height:180px;
+    font-size:72px;
+    color:red;
+    text-align: right;
+    opacity: 50%;
+
+}
+.calc2 .col {
+    display:flex;
+    border: none;
+    border-radius: 50%;
+    font-size:25px;
+    box-sizing:border-box;
+    /*width:58px;*/
+    background-color:rgb(75, 72, 72);
+    text-align:center;
+    color:white;
+    width: 25%;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    margin: 3px;
+}
+.calc2 .col.top {
+    background-color:darkgrey;
+    color:black;
+}
+.calc2 .col.operator {
+    background-color:orange;
+}
+.calc2 .col#zero2 {
+    width: 50%;
+    border-radius:35px;
+    justify-content:left;
+    padding:10px;
+    text-align: left;
+}
+.calc2 .col:hover {
+    background-color: aqua;
+    cursor: pointer;
+    color:red;
+    text-decoration: underline;
+}
+.calc2 .row {
+    display: flex;
+}
+.num {
+    color: black;
+}

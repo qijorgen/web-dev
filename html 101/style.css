@@ -1,0 +1,7 @@
+.city input:focus {
+    border: 5px solid blue;
+}
+
+.city input:hover {
+    border: 5px solid yellow;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        .city.topCity {
+
+            color: yellow;
+        }
+        .city {
+        background-color: tomato;
+        color: white;
+        border: 2px solid black;
+        margin: 20px;
+        padding: 20px;
+        }
+        .topCity {
+            color: blue;
+        }
+
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" defer></script>
+    //console.log("app.js")
+    <script>
+        console.log("app.js This is from internal");
+    
+    </script>
+</head>
+<body>
+htmls tags
+<div class="city topCity" id="q1">
+    <input type="text">
+    <h2>London</h2>
+    <p>London is the capital of England.</p>
+</div> 
+
+<div class="city">
+    <h2>Paris</h2>
+    <p>Paris is the capital of France.</p>
+</div>
+
+<div class="city">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<map name="light">
+	<area shape="circle" coords="30,30,50" onmouseover="document.getElementById('myImage').src='pic_bulbon.gif'" onmouseout="document.getElementById('myImage').src='pic_bulboff.gif'">
+</map>
+
+<img id="myImage" src="pic_bulboff.gif" style="width:100px" usemap="#light">
+
+<script>
+    function myFunction() {
+        document.getElementbyId("q2").style.color = "white";
+    }
+</script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="calccss.css">
+        <style>
+            
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+
+        <script>
+            function change() {
+                document.getElementById("input").innerHTML = "7";
+            }
+        
+        </script>
+        <script src="calc-jquery.js" defer></script>
+    </head>
+    <body>
+        <div style="background-image: url('https://www.w3schools.com/images/w3lynx_200.png');" class="calc-container">
+            <div>
+                <h1 id="input" style="color:red; font-size:80px">
+                    
+                </h1>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>AC</th>
+                        <th>+/-</th>
+                        <th>%</th>
+                        <th class="operator">÷</th>
+                    </tr> 
+                    <tr>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td class="operator">x</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td class="operator">-</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td class="operator">+</td>
+                    </tr>
+                    <tr>
+                        <td id="zero" colspan="2">0</td>
+                        <td>.</td>
+                        <td class="operator">=</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="calc2">
+            <div id="display"></div>
+            <div class = "row">
+                <div class = "col top" id="clear">AC</div>
+                <div class = "col top opposite">+/-</div> 
+                <div class = "col top percent">%</div> 
+                <div class = "col operator">÷</div> 
+            </div>
+            <div class="row">
+                <div class = "col num">7</div>
+                <div class = "col num">8</div> 
+                <div class = "col num">9</div> 
+                <div class = "col operator">x</div> 
+            </div>
+            <div class="row">
+                <div class = "col num">4</div>
+                <div class = "col num">5</div> 
+                <div class = "col num">6</div> 
+                <div class = "col operator">-</div> 
+            </div>
+            <div class="row">
+                <div class = "col num">1</div>
+                <div class = "col num">2</div> 
+                <div class = "col num">3</div> 
+                <div class = "col operator">+</div> 
+            </div>
+            <div class="row">
+                <div class = "col num" id="zero2">0</div>
+                <div class = "col decimal">.</div> 
+                <div class = "col operator" id="equals">=</div> 
+            </div>
+        </div>
+        <div id="random-list">
+            <div>10 random int list</div>
+            
+        </div>
+    </body>
+
+</html>

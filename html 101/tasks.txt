@@ -1,0 +1,42 @@
+html
+script tag
+style tag
+form
+input
+table
+
+web dev
+    - html
+        -html5
+    - css
+        -scss
+    - js
+        -angular
+        - react
+
+Block & Inline
+Classes & Ids
+Images
+CSS
+
+Style & Script tag
+Inline CSS & Javascript
+
+-Javascript
+    internal
+    external
+    inline
+-css
+    internal
+    external
+    inline-style/css
+
+======== css =========
+pseudo Classes
+pseudo elements
+z-index
+display*****
+flex
+
+======== css =========
+use div only
