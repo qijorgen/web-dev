@@ -1,0 +1,16 @@
+
+.for-loop, .foreach-loop {
+    color:red;
+    .loop-list {
+        border: 5px solid red;
+        .loop-item {
+            border: 5px solid black;
+        }
+    }
+}
+/*css selector*/
+.foreach-loop .loop-list{
+    border: 5px solid blue;
+    color:blue;
+}
+

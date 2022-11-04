@@ -1,50 +1,49 @@
 import logo from './logo.svg';
+import ForLoop from './Component/ForLoop'
+
 import './App.css';
-//scss
-//what's npm
-//what node
-//what's nvm
+import './App.scss';
+//scss/sass: super set of css
+//what's npm: node package management
+//what's node: server side javascript
+//what's nvm: node version management
 //what's git, branch, remote? commit?
 function App() {
   
   let array = [1,2,3,4,5,6,7,8,9]
-  
-  function forLoop(array) {
-    const forarray = [];
-     for (let i=0; i< array.length; i++) {
-      forarray.push(<div>{array[i]}</div>) 
-    }
-    return <div>{forarray}</div>
-  }
+
   function foreachLoop(array) {
           
     const foreachArray = []
     array.forEach((ele) => {
-      foreachArray.push(<div>{ele}</div>)
+      foreachArray.push(<div className="loop-item">{ele}</div>)
     })
-    return <div>{foreachArray}</div>
+    return <div className="loop-list">{foreachArray}</div>
   }
+
   return (
     <div className="App">
-      <div>
+      <div className="for-loop">
         for loop here:
-        {
-          forLoop(array)
-        }
+        react knows it's an expression, it will start evaluate the content within the bracket {}
+        { ForLoop(array) }
       </div>
-      <div>
+      <div className="map-loop">
         map loop here:
-      {
-         array.map((ele,idx) => {
-          return <div key={idx}>{ele}</div>
-        })
-      }
+        <div className="loop-list">
+        {
+          array.map((ele,idx) => {
+            return <div key={idx} className="loop-item">{ele}</div>
+          })
+        }
+        </div>
       </div>
-      <div>
+      <div className="foreach-loop">
         foreach loop here:
       {
         //todo: use foreach
-        foreachLoop(array)
+        //... decontruction, 
+        ForLoop([...array, 37, 12, 480])
       }
       </div>
     </div>
