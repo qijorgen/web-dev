@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import ForLoop from './Component/ForLoop'
+import LoopListContainer from './Container/LoopListContainer'
+import Employee from './Component/Employee'
 
 import './App.css';
 import './App.scss';
@@ -8,46 +8,30 @@ import './App.scss';
 //what's node: server side javascript
 //what's nvm: node version management
 //what's git, branch, remote? commit?
+
+//------
+//whats props vs states
+//learn react hook: useState && useEffect
+//write a new component called: Employee, fn ln age rank
+//display them in profile card design
+
+const flag = false;
 function App() {
-  
-  let array = [1,2,3,4,5,6,7,8,9]
-
-  function foreachLoop(array) {
-          
-    const foreachArray = []
-    array.forEach((ele) => {
-      foreachArray.push(<div className="loop-item">{ele}</div>)
-    })
-    return <div className="loop-list">{foreachArray}</div>
-  }
-
-  return (
-    <div className="App">
-      <div className="for-loop">
-        for loop here:
-        react knows it's an expression, it will start evaluate the content within the bracket {}
-        { ForLoop(array) }
-      </div>
-      <div className="map-loop">
-        map loop here:
-        <div className="loop-list">
-        {
-          array.map((ele,idx) => {
-            return <div key={idx} className="loop-item">{ele}</div>
-          })
-        }
+    //employee data are being held in app(the parent component): state
+    //employee data are passed down to child component as: props
+    return (
+        <div className="App">
+            <LoopListContainer switch={flag} array={[1,2,3]}/>
+            <LoopListContainer switch={flag} array={[4,5,6]}/>
+            <LoopListContainer switch={flag} array={[7,8,9]}/>
+            <Employee info={['Paul','Bogden', '23','CEO']}/>
+            <Employee info={['Jenny','Gradver', '61','Intern']}/>
+            <Employee info={['Paula', 'Newman', '45', 'Janitor']}/>
+            {/*<Employee />*/}
+            {/*<Employee />*/}
+            {/*<Employee />*/}
         </div>
-      </div>
-      <div className="foreach-loop">
-        foreach loop here:
-      {
-        //todo: use foreach
-        //... decontruction, 
-        ForLoop([...array, 37, 12, 480])
-      }
-      </div>
-    </div>
-  );
+    );
 }
 
 export default App;

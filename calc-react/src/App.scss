@@ -14,3 +14,22 @@
     color:blue;
 }
 
+.App {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    .employee {
+        height:200px;
+        width:250px;
+        border: 2px solid black;
+        font-family: Helvetica;
+        text-align: center;
+        font-size: 25px; 
+        background-color: orange;
+        
+        .name {
+            color: blue;
+            font-size:30px;
+        }
+    }
+}
