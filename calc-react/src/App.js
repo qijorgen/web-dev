@@ -1,6 +1,6 @@
 import LoopListContainer from './Container/LoopListContainer'
 import Employee from './Component/Employee'
-
+import React from 'react'
 import './App.css';
 import './App.scss';
 //scss/sass: super set of css
@@ -15,21 +15,41 @@ import './App.scss';
 //write a new component called: Employee, fn ln age rank
 //display them in profile card design
 
-const flag = false;
 function App() {
+    const [empList, setEmpList] = React.useState([
+        /*{
+            fn: "fn",
+            ln: "ln",
+            rank: "rank",
+            age: 1,
+            flag: true
+        },*/
+    ])
+
+    const [arrayList, setArray] = React.useState([
+        /*{
+            flag: false,
+            arrayData: [1,2,3],
+        }*/
+    ])
+
+    //use the setter method, inside of useEffect. to generate random data, and render them.
+    
+
     //employee data are being held in app(the parent component): state
     //employee data are passed down to child component as: props
     return (
         <div className="App">
-            <LoopListContainer switch={flag} array={[1,2,3]}/>
-            <LoopListContainer switch={flag} array={[4,5,6]}/>
-            <LoopListContainer switch={flag} array={[7,8,9]}/>
-            <Employee info={['Paul','Bogden', '23','CEO']}/>
-            <Employee info={['Jenny','Gradver', '61','Intern']}/>
-            <Employee info={['Paula', 'Newman', '45', 'Janitor']}/>
-            {/*<Employee />*/}
-            {/*<Employee />*/}
-            {/*<Employee />*/}
+            {
+                arrayList.map((anArray, idx) => {
+                    return <LoopListContainer array={anArray.arrayData} key={idx} switch={anArray.flag}/>
+                })
+            }
+            {
+                empList.map((anEmp, idx) => {
+                    return <Employee info={anEmp} key={idx}/>
+                }) 
+            }
         </div>
     );
 }
