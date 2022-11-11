@@ -32,7 +32,8 @@ function App() {
     const [stringData, setStringData] = React.useState("")
     const [numberData, setNumberData] = React.useState(99)
 
-    //
+    //the first param
+    //the second param: 
     React.useEffect(() => {
         setEmpList([{
             fn: Math.random().toString(36).slice(2, 7),
@@ -43,20 +44,26 @@ function App() {
         }])
     }, [])
 
+    React.useEffect(() => {
+        console.log(`...${stringData} has changed...`);
+    }, [stringData])
+
     //use the setter method, inside of useEffect. to generate random data, and render them.
 
     //employee data are being held in app(the parent component): state
     //employee data are passed down to child component as: props
     return (
         <div className="App">
-            {
-                
-            }
+            stringData: { stringData}
             {
                 empList.map((anEmp, idx) => {
-                    return <Employee info={anEmp} key={idx}/>
+                    
+                    return <Employee info={anEmp} key={idx} />
                 }) 
             }
+            <button onClick={() => {
+                setStringData(stringData + " _");
+            }}>update String Data</button>
         </div>
     );
 }
