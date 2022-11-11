@@ -15,35 +15,42 @@ import './App.scss';
 //write a new component called: Employee, fn ln age rank
 //display them in profile card design
 
-function App() {
-    const [empList, setEmpList] = React.useState([
-        /*{
-            fn: "fn",
-            ln: "ln",
-            rank: "rank",
-            age: 1,
-            flag: true
-        },*/
-    ])
+//------
+//fetch, youtube, how to use it
+//api, callback, promise, ajax call
+// what's scss, why scss
 
-    const [arrayList, setArray] = React.useState([
-        /*{
-            flag: false,
-            arrayData: [1,2,3],
-        }*/
-    ])
+//------
+//todo list task.
+//
+
+//class component - couple yrs back. --> react component life cycle
+//functional component
+//diff? why functional is better.
+function App() {
+    const [empList, setEmpList] = React.useState([])
+    const [stringData, setStringData] = React.useState("")
+    const [numberData, setNumberData] = React.useState(99)
+
+    //
+    React.useEffect(() => {
+        setEmpList([{
+            fn: Math.random().toString(36).slice(2, 7),
+            ln: Math.random().toString(36).slice(2, 7),
+            age: Math.floor(Math.random()*100),
+            rank: Math.random().toString(36).slice(2, 7),
+            flag: true
+        }])
+    }, [])
 
     //use the setter method, inside of useEffect. to generate random data, and render them.
-    
 
     //employee data are being held in app(the parent component): state
     //employee data are passed down to child component as: props
     return (
         <div className="App">
             {
-                arrayList.map((anArray, idx) => {
-                    return <LoopListContainer array={anArray.arrayData} key={idx} switch={anArray.flag}/>
-                })
+                
             }
             {
                 empList.map((anEmp, idx) => {
