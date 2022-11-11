@@ -10,8 +10,6 @@ const Employee = (props) => {
                 Age: {props.info.age} Rank: {props.info.rank}
             </div>
         </div>
-    
-
     </div>
     } else {
         return null

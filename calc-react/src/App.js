@@ -76,7 +76,7 @@ function App() {
     //employee data are passed down to child component as: props
     return (
         <div className="App">
-            <div>
+            <div className='divContainer'>
                 stringData: { stringData}
             {
                 empList.map((anEmp, idx) => {
@@ -91,11 +91,19 @@ function App() {
             
             <hr/>
 
-            <div>
+            <div className='divContainer'>
                 {numberData}
                 <button onClick={() => {
                     setNumberData(numberData + 1)
                 }}>update Number Data</button>
+            </div>
+
+            <div className='divContainer'>
+                {userList.map((aUser, idx) => {
+                    return <div key={idx}>{aUser.userId},{aUser.id}, {aUser.title}, {aUser.completed}
+                    </div>
+                })
+                }
             </div>
         </div>
     );
